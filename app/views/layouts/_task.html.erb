@@ -1,0 +1,20 @@
+ <div>
+ <%= form_tag(tasks_path, id: "contact-form", remote: true)  do %>
+             
+        <%= label_tag "Task" %>
+        <%= text_field_tag :title %>
+            
+             
+        <%= label_tag "Deadline" %>
+        <%= date_field_tag :deadline %>
+
+              
+            
+          <%= label_tag "Category" %>
+          <%= select_tag :category_title, options_from_collection_for_select(@categories, "id", "title", "1")  %>
+
+        <%= submit_tag "Create task" %>
+          
+  
+<% end %>
+</div>

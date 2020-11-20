@@ -1,0 +1,19 @@
+<div>
+
+
+<ul>
+
+<% @emails.each do |e| %>
+    <a href="<%= email_path(e.id) %>" data-remote='true'>
+        
+        <li class="email-<%= e.id %>" <% if e.read == true %> style="background-color: grey;" <% else %> style="background-color: white;"<% end %>>
+        
+         Objet : <%= e.object %>
+         
+         </li>
+    </a>
+<% end  %>
+
+</ul>
+
+</div>

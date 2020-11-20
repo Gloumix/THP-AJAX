@@ -1,0 +1,10 @@
+console.log(document.querySelector('.second-col'));
+
+if (document.querySelector('.second-col').textContent != "")
+{
+    document.querySelector('.second-col').textContent = "";
+}
+
+document.querySelector('ul .email-<%= @email.id %>').style.backgroundColor = 'grey';
+
+document.querySelector('.second-col').insertAdjacentHTML("beforeend","<%= j render 'body', email:  @email %>")

@@ -1,0 +1,11 @@
+<% @categories.each do |c| %>
+    <li><%= c.title %>
+        <ul class="cat-<%= c.id %>">
+            <% @tasks.each do |t| %>
+                <% if t.category.title == c.title %>
+                    <li> <%= t.title %> <%= t.deadline %> </li>
+                <% end %>
+             <% end %>
+        </ul>
+    </li>
+<% end %>

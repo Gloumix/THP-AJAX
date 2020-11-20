@@ -1,0 +1,28 @@
+<div class= "container body-email">
+
+<div class="row pb-5">
+<p><%= @email.object %><br/><br/>  <%= @email.body %> </p>
+</div>
+
+
+<div class="row d-flex flex-row justify-content-around">
+
+      
+<% if @email.read == true %>
+      <%= link_to email_path(@email.id), class:"btn btn-success",  :method => "PUT", remote: true do %> 
+            Marquer comme non-lu 
+      <% end %> 
+<% else %>
+      <%= link_to email_path(@email.id), class:"btn btn-success",  :method => "PUT", remote: true do %> 
+            Marquer comme lu 
+      <% end %> 
+<% end %>
+      
+       <%= link_to email_path(@email.id), class:"btn btn-danger",  :method => "DELETE", remote: true do %> 
+            Supprimer
+       <% end %> 
+ 
+</div>
+
+</div>
+

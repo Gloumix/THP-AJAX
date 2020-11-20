@@ -1,0 +1,2 @@
+
+document.querySelector('ul').insertAdjacentHTML("beforeend", '<a href="<%= email_path(@email.id) %>" data-remote="true"><li class="email-<%= @email.id %>"> Objet : <%= @email.object %></li></a>');
